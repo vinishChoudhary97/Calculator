@@ -1,3 +1,8 @@
+# build simple calculator in tkinter module of python
+# Simple operation (+,-,/,*)
+# this app is subjects to change in future with more functionality and
+# graphics and interactions
+#############################################################################
 from tkinter import *
 
 root = Tk()
@@ -71,6 +76,7 @@ def buttonDivide():
 
 # Define a function for Equal button
 # get content of entry widget and store in var secondNumber
+# logic to calculate and insert answer in entry widget
 #
 def buttonEqual():
     secondNumber = entry.get()
@@ -84,7 +90,7 @@ def buttonEqual():
         entry.insert(0, fNum * int(secondNumber))
     if math == "division":
         entry.insert(0, fNum / int(secondNumber))
-
+# add button widgets for 0-9 and = , +,-,*,/ and clear
 button1 = Button(root, text="1", padx=40, pady=20, command=lambda: buttonClick(1))
 button2 = Button(root, text="2", padx=40, pady=20, command=lambda: buttonClick(2))
 button3 = Button(root, text="3", padx=40, pady=20, command=lambda: buttonClick(3))
@@ -101,7 +107,7 @@ buttonAdd = Button(root, text="+", padx=39, pady=20, command=buttonAdd)
 buttonSubtract= Button(root, text="-", padx=41, pady=20, command=buttonSubtract)
 buttonMultiply = Button(root, text="*", padx=40, pady=20, command=buttonMultiply)
 buttonDivide = Button(root, text="/", padx=41, pady=20, command=buttonDivide)
-
+#add buttons on screen
 button1.grid(row=3, column=0)
 button2.grid(row=3, column=1)
 button3.grid(row=3, column=2)
